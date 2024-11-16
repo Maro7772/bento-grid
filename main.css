@@ -1,0 +1,196 @@
+:root {
+  --Purple100: hsl(254, 88%, 90%);
+  --Purple500: hsl(256, 67%, 59%);
+  --Yellow100: hsl(31, 66%, 93%);
+  --Yellow500: hsl(39, 100%, 71%);
+  --White: hsl(0, 0%, 100%);
+  --Black: hsl(0, 0%, 7%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'DM Sans', sans-serif;
+  margin-top: 10px;
+  height: 100vh;
+}
+.container {
+  width: 90%;
+  margin: 10px auto;
+  height: 90vh;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 3fr auto auto 3fr;
+  grid-template-areas: 
+  'seven first first forth'
+  'seven second third forth'
+  'eight second third forth'
+  'eight six fifth fifth';
+}
+.first {
+  background-color:  var(--Purple500);
+  color: var(--White);
+  font-size: 40px;
+  padding: 20px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  text-align: center;
+  grid-area: first;
+}
+.first p {
+  font-size: 50px;
+}
+.first img {
+  width: 150px;
+}
+.first p:last-child {
+  font-size: 18px;
+}
+.letter {
+  color: var(--Yellow500);
+}
+.second :not(:first-child) {
+  background-color: hsl(270, 11%, 96%);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  padding: 20px;
+  grid-area: second;
+  height: 100%;
+}
+.second img {
+  width: 100%;
+}
+.second .text {
+  padding-right: 20px;
+}
+.text {
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: -2px;
+  line-height: 1;
+}
+.third {
+  background-color: var(--Yellow500);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  padding: 20px 20px 0 20px;
+  grid-area: third;
+  overflow: hidden;
+}
+.third img {
+  margin-top: 20px;
+  width: 100%;
+}
+.forth {
+  background-color: var(--Purple100);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  padding: 20px;
+  overflow: hidden;
+  grid-area: forth;
+}
+.forth img {
+  width: 100%;
+}
+.forth p:last-child {
+  font-weight: bold;
+  font-size: 18px;
+}
+.fifth {
+  background-color: var(--Purple500);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  padding: 20px;
+  color: var(--White);
+  grid-area: fifth;
+  display: flex;
+}
+.fifth img {
+  width: 40%;
+}
+.fifth p {
+  font-size: 30px;
+}
+.six {
+  background-color: hsl(270, 11%, 96%);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  padding: 20px;
+  grid-area: six;
+  overflow: hidden;
+}
+.six img {
+  width: 100%;
+}
+.six h1 {
+  font-size: 50px;
+}
+.six p {
+  margin: 10px 0 20px;
+}
+.seven {
+  background-color: var(--Yellow100);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  padding: 20px;
+  grid-area: seven;
+  overflow: hidden;
+}
+.seven p {
+  margin: 10px 0;
+}
+.seven p span {
+  color: var(--Purple500);
+}
+.seven img {
+  width: 100%;
+}
+.eight {
+  background-color: var(--Yellow500);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  padding: 20px;
+  grid-area: eight;
+  overflow: hidden;
+}
+.eight img {
+  width: 100%;
+}
+@media (max-width:700px) {
+  body {
+    height: 100%;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 100%;
+  }
+}
